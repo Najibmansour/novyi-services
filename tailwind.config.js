@@ -18,6 +18,11 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "radial-gradient":
+          " radial-gradient(circle, rgba(223,4,0,1) 0%, rgba(154,2,2,1) 35%, rgba(104,0,0,1) 100%)",
+      },
+      height: { "homepage-section": "calc(100svh - 80px)" },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

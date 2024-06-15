@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import NovoNavigation from "./components/navmenu";
-import Search from "./components/search";
-import CartButton from "./components/cartbutton";
-import { LOGOIMG, MINILOGOIMG } from "../logoImg";
+import NovoNavigation from "./nav_menu";
+import Search from "./search_bar";
+import MailIconButton from "@/components/icon_buttons/mail_icon_button";
+import { LOGOIMG, MINILOGOIMG } from "@/components/logo/LogoImg";
 
 const Navbar = ({ isBlack = false, scrollY = false }) => {
   const [color, setColor] = useState(isBlack);
@@ -19,7 +19,6 @@ const Navbar = ({ isBlack = false, scrollY = false }) => {
       }
     };
 
-    console.log("test");
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleColorScroll);
       return () => {
@@ -29,17 +28,15 @@ const Navbar = ({ isBlack = false, scrollY = false }) => {
   });
 
   return (
-    <main
-      className={`sticky top-0 z-30 flex h-16  w-full flex-row items-center px-3 py-4 transition-all ${color && "bg-neutral-950"}`}
-    >
-      <LOGOIMG className="ml-2 hidden w-28 p-2 active:scale-95 md:block" />
-      <MINILOGOIMG className="absolute left-[50%]  w-20 -translate-x-[50%] transform p-2 md:hidden" />
-      <div className="flex-1 ">
+    <div className="sticky top-0 z-30 flex h-20 w-full flex-row items-center justify-center px-8 md:px-16">
+      <MINILOGOIMG className="hidden w-20 active:scale-95 md:ml-2 md:block md:p-2" />
+
+      <div className="flex-1">
         <NovoNavigation />
       </div>
-      <Search />
-      <CartButton />
-    </main>
+
+      <MailIconButton />
+    </div>
   );
 };
 

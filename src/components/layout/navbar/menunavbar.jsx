@@ -10,13 +10,13 @@ import {
 } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
-import { LOGOIMG } from "../logoImg";
+import { LOGOIMG } from "@/components/logo/LogoImg";
 
 export function MenuNavbar({ navigation }) {
   return (
     <Sheet className="md:hidden">
       <SheetTrigger asChild>
-        <MenuIcon className="h-10 w-10 text-white" />
+        <MenuIcon className="size-10 text-white" />
       </SheetTrigger>
       <SheetContent side="left" className="w-[90%] ">
         <SheetHeader>
@@ -30,9 +30,9 @@ export function MenuNavbar({ navigation }) {
           ))}
         </div>
         <SheetFooter>
-          <SheetClose asChild>
+          {/* <SheetClose asChild>
             <Button type="submit">Save changes</Button>
-          </SheetClose>
+          </SheetClose> */}
         </SheetFooter>
       </SheetContent>
     </Sheet>

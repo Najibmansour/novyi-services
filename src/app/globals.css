@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 100% 100%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -73,4 +73,20 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+h1 {
+  @apply text-nowrap text-3xl font-semibold md:text-8xl;
+}
+
+h2 {
+  @apply text-nowrap text-3xl font-semibold md:text-6xl;
+}
+
+h5 {
+  @apply text-sm md:text-3xl;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
