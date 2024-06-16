@@ -7,14 +7,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative -mt-20 h-screen w-full">
+    <main className="-mt-20 h-screen w-full">
       <BgGradiant />
       <div className="h-16" />
       <Hero />
       <div className="mt-10 space-y-20">
+        <Services />
         <FAQs />
         <FeedBack />
-        <Services />
       </div>
     </main>
   );

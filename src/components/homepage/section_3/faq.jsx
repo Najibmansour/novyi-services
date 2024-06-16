@@ -52,13 +52,11 @@ const FAQs = () => {
             </AccordionTrigger>
             <AccordionContent className="text-lg italic">
               &quot;{desc}&quot;
-              {list && (
-                <ul>
-                  {list.map(({ item }, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              )}
+              <ul>
+                {list?.map(({ item }, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </AccordionContent>
           </AccordionItem>
         ))}
