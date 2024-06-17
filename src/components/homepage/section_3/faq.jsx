@@ -1,3 +1,4 @@
+"use client";
 import {
   Accordion,
   AccordionContent,
@@ -6,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import React from "react";
+import ContactDialogue from "../contact_dialogue/contact";
 
 const faq = [
   {
@@ -63,7 +65,10 @@ const FAQs = () => {
       </Accordion>
       <div className="space-y-1.5 text-center md:w-9/12">
         <h4 className="text-2xl text-white">Stil have any questions?</h4>
-        <Button size="sm">CONTACT US</Button>
+
+        <ContactDialogue>
+          <Button className="rounded-xl">CONTACT US</Button>
+        </ContactDialogue>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import { Inika, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar/components/navbar";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="relative">
+        <Toaster
+          position="top-center"
+          richColors
+          toastOptions={{
+            unstyled: false,
+            classNames: {
+              error: "",
+              success: "",
+              warning: "",
+              info: "",
+            },
+          }}
+        />
         <main className="relative">
           <Navbar />
           {children}

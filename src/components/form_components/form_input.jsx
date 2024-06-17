@@ -22,7 +22,7 @@ export default function FormInput({
         {...registerOBJ(use_name, restrictions)}
       />
       {errorsOBJ[use_name]?.message && (
-        <span className="">{errors.from_name.message}</span>
+        <span className="text-center">{errorsOBJ[use_name]?.message}</span>
       )}
     </div>
   );
@@ -48,13 +48,20 @@ export function FormTextarea({
         {...registerOBJ(use_name, restrictions)}
       />
       {errorsOBJ[use_name]?.message && (
-        <span className="">{errors.from_name.message}</span>
+        <span className="text-center">{errorsOBJ[use_name]?.message}</span>
       )}
     </div>
   );
 }
 
-export function FormStars({ title, use_name, errorsOBJ, className }) {
+export function FormStars({
+  title,
+  use_name,
+  restrictions,
+  errorsOBJ,
+  registerOBJ,
+  className,
+}) {
   "use client";
   const [rating, setRating] = useState(undefined);
   return (
@@ -63,19 +70,24 @@ export function FormStars({ title, use_name, errorsOBJ, className }) {
 
       <div className="flex flex-row gap-1">
         {Array.from(Array(5).keys()).map((_, i) => (
-          <button
-            type="button"
-            key={i}
-            onClick={() => {
-              setRating(i);
-            }}
-          >
-            <StarIcon fill={rating >= i ? "white" : "none"} />
-          </button>
+          <>
+            <input
+              className="hidden"
+              type="checkbox"
+              value={i + 1}
+              id={i}
+              key={i}
+              {...registerOBJ(use_name, restrictions)}
+              onClick={() => setRating(i)}
+            />
+            <label for={i}>
+              <StarIcon fill={rating >= i ? "white" : "none"} />
+            </label>{" "}
+          </>
         ))}
       </div>
       {errorsOBJ[use_name]?.message && (
-        <span className="">{errors.from_name.message}</span>
+        <span className="text-center">{errorsOBJ[use_name]?.message}</span>
       )}
     </div>
   );

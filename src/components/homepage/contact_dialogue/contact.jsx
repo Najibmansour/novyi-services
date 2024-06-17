@@ -1,16 +1,23 @@
-"use client";
 import FormInput, {
   FormStars,
   FormTextarea,
 } from "@/components/form_components/form_input";
 import { Button } from "@/components/ui/button";
-import { sendFeedback } from "@/lib/api/sendform";
-import { cn } from "@/lib/utils";
-import { React, useRef } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { sendContact } from "@/lib/api/sendform";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
-const FeedBack = () => {
+const ContactDialogue = ({ children }) => {
   const {
     register,
     handleSubmit,
@@ -21,52 +28,59 @@ const FeedBack = () => {
 
   const onSubmit = (e) => {
     if (e["bot_fiedld"] == "") {
-      sendFeedback(e)
+      sendContact(e)
         .then((res) => {
           console.log(res);
         })
-        .then(() => {
-          console.log("sent");
+        .then((err) => {
           toast.success("Message sent successfully");
+          console.log(err);
         })
         .catch((err) => {
-          console.log(err);
           toast.error("Message was not sent");
+          console.log(err);
         });
     }
   };
 
   return (
-    <section className="flex w-full flex-col items-center gap-5">
-      <h2>FeedBack</h2>
-      <div className="flex w-9/12 flex-col items-center rounded-3xl border-4 border-white p-5 md:flex-row md:p-10">
+    <Dialog>
+      <DialogTrigger asChild>{children}</DialogTrigger>
+      <DialogContent className="max-h-min max-w-[400px] rounded-2xl border-2 bg-secondary md:max-w-min">
+        <DialogHeader>
+          <DialogTitle>Contact Us</DialogTitle>
+        </DialogHeader>
         <form
-          className="flex w-full flex-col gap-6 md:flex-col"
+          className="flex w-full flex-col gap-3 md:flex-col md:gap-6"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex flex-col gap-6 md:flex-row">
+          <div className="flex flex-col gap-3 md:flex-row md:gap-6">
             <div className="space-y-4 md:w-1/2">
-              <div className="flex w-full flex-col gap-6 md:flex-row">
+              <div className="flex w-full flex-col gap-3 md:flex-row md:gap-6">
                 <FormInput
                   className="w-full"
-                  title="First Name"
-                  placeholder="John"
-                  use_name="first_name"
+                  title="Full Name"
+                  placeholder="John Doe"
+                  use_name="full_name"
                   errorsOBJ={errors}
                   registerOBJ={register}
                   restrictions={{
-                    required: "First Name is required",
+                    required: "Name is required",
                   }}
                 />
                 <FormInput
                   className="w-full"
-                  title="Last Name"
-                  placeholder="Doe"
-                  use_name="last_name"
+                  title="Phone"
+                  placeholder="+xxxxxxxxx"
+                  use_name="phone_num"
                   errorsOBJ={errors}
                   registerOBJ={register}
                   restrictions={{
-                    required: "Last Name is required",
+                    pattern: {
+                      value: /[0-9]/,
+                      message: "Not a valid phone number",
+                    },
+                    required: "Phone number is required",
                   }}
                 />
               </div>
@@ -79,43 +93,22 @@ const FeedBack = () => {
                 restrictions={{
                   pattern: {
                     value: /[0-9]/,
-                    message: "Not a valid Email",
+                    message: "Not a valid email",
                   },
                   required: "Email is required",
                 }}
               />
-              <div className="">
-                <FormStars
-                  className="w-full"
-                  title="How satisfied are you with our services"
-                  placeholder="Doe"
-                  use_name="rating"
-                  errorsOBJ={errors}
-                  registerOBJ={register}
-                  restrictions={{
-                    max: {
-                      value: 5,
-                      message:
-                        "Wow thank you, but unfortunatly we cant have a rating above 5",
-                    },
-                    min: {
-                      value: 0,
-                      message: "Cant rate less than 0",
-                    },
-                    required: "Rating is required",
-                  }}
-                />
-              </div>
             </div>
             <div>
               <FormTextarea
                 className="md:h-96"
-                title="Feedback"
-                placeholder="Optional Feedback message..."
-                use_name="feedback"
+                title="Subject"
+                placeholder="message..."
+                use_name="subject"
                 errorsOBJ={errors}
                 registerOBJ={register}
                 restrictions={{
+                  required: "Message is required",
                   maxlength: {
                     value: 15,
                     message: "error message", // JS only: <p>error message</p> TS only support string
@@ -132,9 +125,9 @@ const FeedBack = () => {
           </div>
           <Button className="rounded-xl">SEND</Button>
         </form>
-      </div>
-    </section>
+      </DialogContent>
+    </Dialog>
   );
 };
 
-export default FeedBack;
+export default ContactDialogue;

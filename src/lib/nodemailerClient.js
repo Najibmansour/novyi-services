@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import * as handlebars from "handlebars";
-import { feedbackTemplate } from "./templates/templ";
+import { contact_template, feedback_template } from "./templates/templates";
 
 const email = process.env.NEXT_PUBLIC_NODEMAILER_MAIL;
 const pass = process.env.NEXT_PUBLIC_NODEMAILER_PASS;
@@ -27,12 +27,38 @@ export const mailOptions = {
   to: email,
 };
 
-export function compileFeedbackTemplate(from_name, from_phone, from_message) {
-  const template = handlebars.compile(feedbackTemplate);
+export function compileContactTemplate(
+  from_name,
+  from_phone,
+  from_mail,
+  message,
+) {
+  const template = handlebars.compile(contact_template);
   const htmlBody = template({
     from_name: from_name,
     from_phone: from_phone,
-    message: from_message,
+    from_mail: from_mail,
+    message: message,
   });
+  console.log(htmlBody);
+  return htmlBody;
+}
+
+export function compileFeedbackTemplate(
+  first_name,
+  last_name,
+  from_mail,
+  feedback,
+  rating,
+) {
+  const template = handlebars.compile(feedback_template);
+  const htmlBody = template({
+    first_name: first_name,
+    last_name: last_name,
+    feedback: feedback,
+    from_mail: from_mail,
+    rating: rating,
+  });
+  console.log(htmlBody);
   return htmlBody;
 }
