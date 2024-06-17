@@ -44,7 +44,7 @@ const FeedBack = () => {
       <h2>FeedBack</h2>
       <div className="flex w-9/12 flex-col items-center rounded-3xl border-4 border-white p-5 md:flex-row md:p-10">
         <form className="flex w-full flex-col gap-6 md:flex-col">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:flex-row">
             <div className="space-y-4 md:w-1/2">
               <div className="flex w-full flex-col gap-6 md:flex-row">
                 <FormInput

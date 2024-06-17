@@ -41,7 +41,7 @@ export function FormTextarea({
     <div className={cn(className, "flex h-auto w-full flex-col gap-1")}>
       <label className="text-xl md:text-3xl">{title}:</label>
       <textarea
-        className="placeholder:text-md rounded-2xl border-2 border-white bg-transparent px-5 py-3 placeholder:text-white md:h-60 md:w-[36rem] md:placeholder:text-xl"
+        className="placeholder:text-md rounded-2xl border-2 border-white bg-transparent px-5 py-3 placeholder:text-white md:h-60 md:w-[31rem] md:placeholder:text-xl"
         type="text"
         id={use_name}
         placeholder={placeholder}
@@ -56,7 +56,7 @@ export function FormTextarea({
 
 export function FormStars({ title, use_name, errorsOBJ, className }) {
   "use client";
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(undefined);
   return (
     <div className={cn(className, "flex h-auto w-full flex-col gap-1")}>
       <label className="text-xl md:text-3xl">{title}:</label>
