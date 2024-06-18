@@ -1,5 +1,5 @@
 import { Inika, Inter } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import Navbar from "@/components/layout/navbar/components/navbar";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <main className="relative">
-          <Navbar />
+          <Navbar delay={0} duration={1} />
           {children}
         </main>
       </body>
