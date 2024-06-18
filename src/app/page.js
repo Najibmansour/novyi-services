@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="-mt-20 h-screen w-full">
+    <main className="-mt-20 h-screen w-full overflow-x-hidden">
       <BgGradiant />
       <div className="h-16" />
       <Hero />
@@ -18,6 +18,7 @@ export default function Home() {
         <FAQs />
         <FeedBack />
       </div>
+      <div className="h-48" />
     </main>
   );
 }

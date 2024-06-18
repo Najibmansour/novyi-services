@@ -4,7 +4,7 @@ import NovoNavigation from "./nav_menu";
 import Search from "./search_bar";
 import MailIconButton from "@/components/icon_buttons/mail_icon_button";
 import { LOGOIMG, MINILOGOIMG } from "@/components/logo/LogoImg";
-
+import { motion } from "framer-motion";
 const Navbar = ({ isBlack = false, scrollY = false }) => {
   // const [color, setColor] = useState(isBlack);
 
@@ -28,7 +28,11 @@ const Navbar = ({ isBlack = false, scrollY = false }) => {
   // });
 
   return (
-    <div className="sticky top-0 z-30 flex h-20 w-full flex-row items-center justify-center px-8 md:px-16">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 2, duration: 1.5 } }}
+      className="sticky top-0 z-30 flex h-20 w-full flex-row items-center justify-center px-8 md:px-16"
+    >
       <MINILOGOIMG className="hidden w-20 active:scale-95 md:ml-2 md:block md:p-2" />
 
       <div className="flex-1">
@@ -36,7 +40,7 @@ const Navbar = ({ isBlack = false, scrollY = false }) => {
       </div>
 
       <MailIconButton />
-    </div>
+    </motion.div>
   );
 };
 

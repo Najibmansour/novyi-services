@@ -92,3 +92,25 @@ body {
 
   user-select: none;
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #efefef #700000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #700000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #efefef;
+  border-radius: 20px;
+  border: 10px dashed #ffffff;
+}
