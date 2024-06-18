@@ -2,7 +2,7 @@ import { importAll } from "@/lib/utils";
 import React from "react";
 import ServiceCard from "./service_card";
 
-const images = importAll(require.context("@/assets/service_images", true));
+const images = importAll(require.context("@/assets/service_icons", true));
 
 const services = [
   { title: "Ads", image: images["advertisements.svg"][0] },

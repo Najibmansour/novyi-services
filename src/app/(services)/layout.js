@@ -3,6 +3,7 @@ import "@/app/globals.css";
 import Navbar from "@/components/layout/navbar/components/navbar";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
+import BgGradiant from "@/components/layout/bg/bg-gradiant";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,8 @@ export default function RootLayout({ children }) {
           }}
         />
         <main className="relative">
+          <BgGradiant />
+
           <Navbar delay={0} duration={1} />
           {children}
         </main>
