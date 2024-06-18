@@ -35,13 +35,13 @@ const faq = [
 const FAQs = () => {
   return (
     <section className="flex w-screen flex-col items-center gap-y-5 text-secondary">
-      <h2 className="mb-5 w-[75%] text-center text-4xl font-bold tracking-wider text-white lg:text-6xl">
+      <h2 className="mb-5 w-full text-center text-4xl font-bold tracking-wider text-white lg:text-6xl">
         FAQS
       </h2>
       <Accordion
         type="single"
         collapsible
-        className="w-[80%] space-y-5 lg:w-[75%]"
+        className="w-[90%] space-y-5 lg:w-[75%]"
       >
         {faq.map(({ title, desc, list }, i) => (
           <AccordionItem

@@ -39,7 +39,7 @@ const FeedBack = () => {
   return (
     <section className="flex w-full flex-col items-center gap-5">
       <h2>FeedBack</h2>
-      <div className="flex w-9/12 flex-col items-center rounded-3xl border-4 border-white p-5 md:flex-row md:p-10">
+      <div className="flex w-[90%] flex-col items-center rounded-3xl border-4 border-white p-5 md:flex-row md:p-10">
         <form
           className="flex w-full flex-col gap-6 md:flex-col"
           onSubmit={handleSubmit(onSubmit)}
