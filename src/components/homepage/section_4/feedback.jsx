@@ -118,7 +118,7 @@ const FeedBack = () => {
                 restrictions={{
                   maxlength: {
                     value: 15,
-                    message: "error message", // JS only: <p>error message</p> TS only support string
+                    message: "error message",
                   },
                 }}
               />
