@@ -1,15 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import IMAGE from "@/assets/service_images/branding.webp";
+import IMAGE from "@/assets/service_images/seo.webp";
 
 const info = {
-  title: "Consulting",
-  subtitle: "Offering creative solutions to complex challenges",
+  title: "Card SEO",
+  subtitle: "Makes your business memorable",
   overview:
-    "Transform your business with our comprehensive consulting solutions, we are committed to help you achieve excellence, so discover with us the power of our two-part consulting approach designed to provide comprehensive support for your success.",
-  list: ["Generale Consultation", "Detailed Consultation"],
+    "Our Card SEO Optimization service focuses on increasing the visibility and ranking of your product listings. We craft compelling review texts and relevant questions that engage customers interaction, build trust, and drive more traffic and sales.",
+  list: [
+    "Help optimize product data for beginners",
+    "Identify problem areas for existing sellers",
+    "Competitor analysis",
+    "Write key queries",
+    "Formation of the text of answers to customers",
+    "Unique description to increase conversion",
+  ],
   success:
-    "Together, we will achieve success, We tailor our strategies to address your unique challenges, providing innovative solutions and actionable insights.  ",
+    "We will mix our SEO techniques with compelling review and question formation to boost your online visibility and engage your audience effectively. Together, we'll elevate your website's performance and achieve success in the competitive digital landscape.Let's succeed together.",
 };
 
 const Branding = () => {

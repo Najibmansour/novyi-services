@@ -62,8 +62,9 @@ const Occurred = () => {
     <div className="text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          <h2>Occurred to you</h2>
+          Occurred to you
         </h2>
+
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
           {services.map(({ title, main_icon, desc, list }, i) => (
             <ServiceCard

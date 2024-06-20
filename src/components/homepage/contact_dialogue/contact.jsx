@@ -46,9 +46,11 @@ const ContactDialogue = ({ children }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-h-min max-w-[400px] rounded-2xl border-2 bg-secondary md:max-w-min">
+      <DialogContent className="max-h-min max-w-[400px] rounded-3xl border-2 bg-secondary p-10 md:max-w-min">
         <DialogHeader>
-          <DialogTitle>Contact Us</DialogTitle>
+          <DialogTitle className="text-center text-xl md:text-4xl">
+            Contact Us
+          </DialogTitle>
         </DialogHeader>
         <form
           className="flex w-full flex-col gap-3 md:flex-col md:gap-6"

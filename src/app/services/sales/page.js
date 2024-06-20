@@ -1,22 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import IMAGE from "@/assets/service_images/branding.webp";
+import IMAGE from "@/assets/service_images/sales.webp";
 
 const info = {
-  title: "Card SEO",
+  title: "Sales at the initial stage",
   subtitle: "Makes your business memorable",
   overview:
-    "Our Card SEO Optimization service focuses on increasing the visibility and ranking of your product listings. We craft compelling review texts and relevant questions that engage customers interaction, build trust, and drive more traffic and sales.",
+    "Our sales service helps you launch your product with a strong marketplace entry, because we employ targeted strategies to attract early adopters, and also we focus on building brand awareness, driving initial sales, and creating momentum for sustained business growth.",
   list: [
-    "Help optimize product data for beginners",
-    "Identify problem areas for existing sellers",
-    "Competitor analysis",
-    "Write key queries",
-    "Formation of the text of answers to customers",
-    "Unique description to increase conversion",
+    "Understanding the marketplace",
+    "Account setup guide",
+    "Optimization tips",
   ],
   success:
-    "We will mix our SEO techniques with compelling review and question formation to boost your online visibility and engage your audience effectively. Together, we'll elevate your website's performance and achieve success in the competitive digital landscape.Let's succeed together.",
+    "We will achieve sales success together, by merging your product knowledge with our sales expertise. We develop tailored strategies that target your ideal customers, optimize your sales process, and drive revenue growth. we will surpass your sales goals, Through collaboration, innovation, and a commitment to excellence.Let's succeed together.",
 };
 
 const Branding = () => {

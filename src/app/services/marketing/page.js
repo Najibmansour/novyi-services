@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import IMAGE from "@/assets/service_images/branding.webp";
+import IMAGE from "@/assets/service_images/marketing.webp";
 
 const info = {
   title: "Branding and design",

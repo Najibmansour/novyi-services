@@ -3,26 +3,23 @@ import Image from "next/image";
 import IMAGE from "@/assets/service_images/branding.webp";
 
 const info = {
-  title: " calculation of unit economics of service",
-  subtitle: "Having a clear vision and path. ",
+  title: "Branding and design",
+  subtitle: "Makes your business memorable",
   overview:
-    "Our unit economics calculation service offers precise analysis of your business, per-unit costs and revenues. We help you understand key metrics such as customer acquisition cost, lifetime value, and contribution margin.",
+    "Our Branding and Design service crafts a distinctive and unified brand identity that captures the essence of your business, that resonates with your target audience.",
   list: [
-    "Identify key metrics",
-    "Revenue calculation",
-    "Cost calculation",
-    "Calculate gross profit per unit",
-    "Analyze contribution margin",
-    "Calculate breakeven point",
-    "Asses profitability",
+    "Comprehensive design solutions",
+    "Logo Creation",
+    "Visual assets",
+    "Detailed branding Guide",
   ],
   success:
-    "we will master the calculation of your unit economics; by combining your business insights with our analytical expertise, we will identify key cost drivers and revenue streams, optimize pricing strategies, and enhance profitability. Let's succeed together.",
+    "Success in branding is a collaborative effort. We combine your vision with our expertise. Our personalized approach, innovative strategies, and commitment to quality ensure we achieve outstanding results together. Let's succeed together.",
 };
 
 const Branding = () => {
   return (
-    <main className="flex h-homepage-section w-full flex-col items-center space-y-5 md:space-y-10">
+    <main className="flex h-screen w-full flex-col items-center space-y-5 md:space-y-10">
       <section className="flex h-auto w-[90%] flex-col space-x-5 space-y-5 md:flex-row md:items-center md:justify-evenly">
         <div className="">
           <h1 className="text-wrap text-4xl md:text-7xl md:leading-[5rem]">

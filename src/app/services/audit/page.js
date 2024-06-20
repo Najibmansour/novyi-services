@@ -1,19 +1,26 @@
 import React from "react";
 import Image from "next/image";
-import IMAGE from "@/assets/service_images/branding.webp";
+import IMAGE from "@/assets/service_images/audit.webp";
 
 const info = {
-  title: "Sales at the initial stage",
-  subtitle: "Makes your business memorable",
+  title: "Audit for current product",
+  subtitle: "Detecting and preventing errors or fraud",
   overview:
-    "Our sales service helps you launch your product with a strong marketplace entry, because we employ targeted strategies to attract early adopters, and also we focus on building brand awareness, driving initial sales, and creating momentum for sustained business growth.",
+    "Our Branding and Design service crafts a distinctive and unified brand identity that captures the essence of your business, that resonates with your target audience.",
   list: [
-    "Understanding the marketplace",
-    "Account setup guide",
-    "Optimization tips",
+    "Product description",
+    "Quality assessment",
+    "Market positioning",
+    "Customer feedback",
+    "Sales performance",
+    "Competitive analysis",
+    "Regulatory compliance",
+    "Supply chain analysis",
+    "Packaging and presentation",
+    "Recommendations",
   ],
   success:
-    "We will achieve sales success together, by merging your product knowledge with our sales expertise. We develop tailored strategies that target your ideal customers, optimize your sales process, and drive revenue growth. we will surpass your sales goals, Through collaboration, innovation, and a commitment to excellence.Let's succeed together.",
+    "Success in auditing is a collaborative effort. We mix your deep understanding of your business with our auditing experts, we will enhance efficiency, and identify opportunities for improvement.  Our thorough and transparent approach, will drive your organization towards greater accuracy and success.  Let's succeed together.   ",
 };
 
 const Branding = () => {

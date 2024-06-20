@@ -49,9 +49,15 @@ const Services = () => {
   return (
     <section className="flex flex-col items-center justify-center gap-6">
       <h2>Services</h2>
-      <div className="gri grid w-[80%] grid-cols-3 gap-2 md:w-[75%] md:grid-cols-3 md:gap-5">
+      <div className="gri grid w-[80%] grid-cols-3 gap-2 md:w-[75%] md:grid-cols-3 md:gap-10">
         {services.map(({ title, image, href }, i) => (
-          <ServiceCard href={href} key={i} title={title} image={image} />
+          <ServiceCard
+            href={href}
+            key={i}
+            title={title}
+            image={image}
+            index={i}
+          />
         ))}
       </div>
     </section>
