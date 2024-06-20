@@ -6,7 +6,13 @@ import MailIconButton from "@/components/icon_buttons/mail_icon_button";
 import { LOGOIMG, MINILOGOIMG } from "@/components/logo/LogoImg";
 import { motion } from "framer-motion";
 import Link from "next/link";
-const Navbar = ({ isBlack = false, scrollY = false, delay, duration }) => {
+const Navbar = ({
+  isBlack = false,
+  scrollY = false,
+  delay,
+  duration,
+  initOp = 0,
+}) => {
   // const [color, setColor] = useState(isBlack);
 
   // useEffect(() => {
@@ -30,7 +36,7 @@ const Navbar = ({ isBlack = false, scrollY = false, delay, duration }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: initOp }}
       animate={{ opacity: 1, transition: { delay: delay, duration: duration } }}
       className="sticky top-0 z-30 flex h-20 w-full flex-row items-center justify-center px-8 md:px-16"
     >

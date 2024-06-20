@@ -1,9 +1,9 @@
 import { Inika, Inter } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/layout/navbar/components/navbar";
-import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
 import BgGradiant from "@/components/layout/bg/bg-gradiant";
+import Transition from "./transition";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,8 +32,8 @@ export default function RootLayout({ children }) {
         <main className="relative">
           <BgGradiant />
 
-          <Navbar delay={0} duration={1} />
-          {children}
+          <Navbar delay={0} duration={0} initOp={1} />
+          <Transition>{children}</Transition>
         </main>
       </body>
     </html>

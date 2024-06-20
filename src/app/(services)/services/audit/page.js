@@ -3,18 +3,24 @@ import Image from "next/image";
 import IMAGE from "@/assets/service_images/branding.webp";
 
 const info = {
-  title: "Branding and design",
-  subtitle: "Makes your business memorable",
+  title: "Audit for current product",
+  subtitle: "Detecting and preventing errors or fraud",
   overview:
     "Our Branding and Design service crafts a distinctive and unified brand identity that captures the essence of your business, that resonates with your target audience.",
   list: [
-    "Comprehensive design solutions",
-    "Logo Creation",
-    "Visual assets",
-    "Detailed branding Guide",
+    "Product description",
+    "Quality assessment",
+    "Market positioning",
+    "Customer feedback",
+    "Sales performance",
+    "Competitive analysis",
+    "Regulatory compliance",
+    "Supply chain analysis",
+    "Packaging and presentation",
+    "Recommendations",
   ],
   success:
-    "Success in branding is a collaborative effort. We combine your vision with our expertise. Our personalized approach, innovative strategies, and commitment to quality ensure we achieve outstanding results together. Let's succeed together.",
+    "Success in auditing is a collaborative effort. We mix your deep understanding of your business with our auditing experts, we will enhance efficiency, and identify opportunities for improvement.  Our thorough and transparent approach, will drive your organization towards greater accuracy and success.  Let's succeed together.   ",
 };
 
 const Branding = () => {

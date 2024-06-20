@@ -3,18 +3,13 @@ import Image from "next/image";
 import IMAGE from "@/assets/service_images/branding.webp";
 
 const info = {
-  title: "Branding and design",
-  subtitle: "Makes your business memorable",
+  title: "Consulting",
+  subtitle: "Offering creative solutions to complex challenges",
   overview:
-    "Our Branding and Design service crafts a distinctive and unified brand identity that captures the essence of your business, that resonates with your target audience.",
-  list: [
-    "Comprehensive design solutions",
-    "Logo Creation",
-    "Visual assets",
-    "Detailed branding Guide",
-  ],
+    "Transform your business with our comprehensive consulting solutions, we are committed to help you achieve excellence, so discover with us the power of our two-part consulting approach designed to provide comprehensive support for your success.",
+  list: ["Generale Consultation", "Detailed Consultation"],
   success:
-    "Success in branding is a collaborative effort. We combine your vision with our expertise. Our personalized approach, innovative strategies, and commitment to quality ensure we achieve outstanding results together. Let's succeed together.",
+    "Together, we will achieve success, We tailor our strategies to address your unique challenges, providing innovative solutions and actionable insights.  ",
 };
 
 const Branding = () => {

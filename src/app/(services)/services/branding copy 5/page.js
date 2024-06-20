@@ -3,18 +3,20 @@ import Image from "next/image";
 import IMAGE from "@/assets/service_images/branding.webp";
 
 const info = {
-  title: "Branding and design",
+  title: "Card SEO",
   subtitle: "Makes your business memorable",
   overview:
-    "Our Branding and Design service crafts a distinctive and unified brand identity that captures the essence of your business, that resonates with your target audience.",
+    "Our Card SEO Optimization service focuses on increasing the visibility and ranking of your product listings. We craft compelling review texts and relevant questions that engage customers interaction, build trust, and drive more traffic and sales.",
   list: [
-    "Comprehensive design solutions",
-    "Logo Creation",
-    "Visual assets",
-    "Detailed branding Guide",
+    "Help optimize product data for beginners",
+    "Identify problem areas for existing sellers",
+    "Competitor analysis",
+    "Write key queries",
+    "Formation of the text of answers to customers",
+    "Unique description to increase conversion",
   ],
   success:
-    "Success in branding is a collaborative effort. We combine your vision with our expertise. Our personalized approach, innovative strategies, and commitment to quality ensure we achieve outstanding results together. Let's succeed together.",
+    "We will mix our SEO techniques with compelling review and question formation to boost your online visibility and engage your audience effectively. Together, we'll elevate your website's performance and achieve success in the competitive digital landscape.Let's succeed together.",
 };
 
 const Branding = () => {

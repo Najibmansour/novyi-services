@@ -70,20 +70,19 @@ export function FormStars({
 
       <div className="flex flex-row gap-1">
         {Array.from(Array(5).keys()).map((_, i) => (
-          <>
+          <div key={i}>
             <input
               className="hidden"
               type="checkbox"
               value={i + 1}
               id={i}
-              key={i}
               {...registerOBJ(use_name, restrictions)}
               onClick={() => setRating(i)}
             />
-            <label for={i}>
+            <label htmlFor={i}>
               <StarIcon fill={rating >= i ? "white" : "none"} />
             </label>{" "}
-          </>
+          </div>
         ))}
       </div>
       {errorsOBJ[use_name]?.message && (

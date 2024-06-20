@@ -3,18 +3,21 @@ import Image from "next/image";
 import IMAGE from "@/assets/service_images/branding.webp";
 
 const info = {
-  title: "Branding and design",
-  subtitle: "Makes your business memorable",
+  title: " calculation of unit economics of service",
+  subtitle: "Having a clear vision and path. ",
   overview:
-    "Our Branding and Design service crafts a distinctive and unified brand identity that captures the essence of your business, that resonates with your target audience.",
+    "Our unit economics calculation service offers precise analysis of your business, per-unit costs and revenues. We help you understand key metrics such as customer acquisition cost, lifetime value, and contribution margin.",
   list: [
-    "Comprehensive design solutions",
-    "Logo Creation",
-    "Visual assets",
-    "Detailed branding Guide",
+    "Identify key metrics",
+    "Revenue calculation",
+    "Cost calculation",
+    "Calculate gross profit per unit",
+    "Analyze contribution margin",
+    "Calculate breakeven point",
+    "Asses profitability",
   ],
   success:
-    "Success in branding is a collaborative effort. We combine your vision with our expertise. Our personalized approach, innovative strategies, and commitment to quality ensure we achieve outstanding results together. Let's succeed together.",
+    "we will master the calculation of your unit economics; by combining your business insights with our analytical expertise, we will identify key cost drivers and revenue streams, optimize pricing strategies, and enhance profitability. Let's succeed together.",
 };
 
 const Branding = () => {
