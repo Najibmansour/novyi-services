@@ -11,9 +11,9 @@ const navigation = [
 
 const NovoNavigation = (props) => {
   return (
-    <div className="flex items-center md:flex-row flex-row-reverse justify-end">
-      <Search />
-      <nav className="hidden md:justify-end text-white md:flex md:space-x-16 md:mx-16 flex-1 ">
+    <div className="flex flex-row-reverse items-center justify-end md:flex-row">
+      {/* <Search /> */}
+      <nav className="hidden flex-1 text-white md:mx-16 md:flex md:justify-start md:space-x-7">
         {navigation.map(({ title, href }, i) => (
           <Link
             key={i}

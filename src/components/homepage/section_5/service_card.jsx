@@ -38,7 +38,7 @@ const ServiceCard = ({ title, image, href, index }) => {
       y: 0,
       opacity: 1,
       transition: {
-        delay: isLeft(index) ? 0.5 : isRight(index) ? 1 : 0,
+        delay: isLeft(index) ? 0.3 : isRight(index) ? 0.5 : 0,
         type: "spring",
         stiffness: 300,
       },

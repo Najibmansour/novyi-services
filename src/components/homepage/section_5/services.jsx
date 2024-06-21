@@ -5,7 +5,11 @@ import ServiceCard from "./service_card";
 const images = importAll(require.context("@/assets/service_icons", true));
 
 const services = [
-  { title: "Ads", href: "/services/", image: images["advertisements.svg"][0] },
+  {
+    title: "Ads",
+    href: "/services/merketing",
+    image: images["advertisements.svg"][0],
+  },
   {
     title: "Auditing",
     href: "/services/audit",
@@ -37,8 +41,8 @@ const services = [
     image: images["Marketing-new.svg"][0],
   },
   {
-    title: "Presentation",
-    href: "/services/",
+    title: "Sales",
+    href: "/services/sales",
     image: images["presentation.svg"][0],
   },
   { title: "SEO", href: "/services/seo", image: images["seo.svg"][0] },

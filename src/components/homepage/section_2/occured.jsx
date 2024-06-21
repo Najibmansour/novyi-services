@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import ServiceCard from "./service_card";
+import { motion, useInView, stagger } from "framer-motion";
 
 const services = [
   {
@@ -58,24 +60,56 @@ const services = [
 ];
 
 const Occurred = () => {
+  const demoVariants = {
+    hidden: {
+      opacity: 0,
+      y: -300,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-500px 0px",
+  });
+
+  useEffect(() => {
+    console.log("Element is in view: ", isInView);
+  }, [isInView]);
+
   return (
     <div className="text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-center font-extrabold tracking-tight text-white">
           Occurred to you
         </h2>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
+        <motion.div
+          ref={ref}
+          variants={demoVariants}
+          animate={isInView ? "animate" : ""}
+          initial="hidden"
+          className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4"
+        >
           {services.map(({ title, main_icon, desc, list }, i) => (
-            <ServiceCard
-              key={i}
-              desc={desc}
-              title={title}
-              main_icon={main_icon}
-              list={list}
-            />
+            <motion.div key={i} variants={demoVariants}>
+              <ServiceCard
+                desc={desc}
+                title={title}
+                main_icon={main_icon}
+                list={list}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
