@@ -52,7 +52,7 @@ const ServiceCard = ({ title, image, href, index }) => {
   });
 
   useEffect(() => {
-    console.log("Element is in view: ", isInView, index);
+    // console.log("Element is in view: ", isInView, index);
   }, [isInView]);
 
   return (

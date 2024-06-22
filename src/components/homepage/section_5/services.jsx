@@ -7,7 +7,7 @@ const images = importAll(require.context("@/assets/service_icons", true));
 const services = [
   {
     title: "Ads",
-    href: "/services/merketing",
+    href: "/services/marketing",
     image: images["advertisements.svg"][0],
   },
   {
@@ -32,7 +32,7 @@ const services = [
   },
   {
     title: "Graphic Desgin",
-    href: "/services/",
+    href: "/services/branding",
     image: images["graphic-design.svg"][0],
   },
   {

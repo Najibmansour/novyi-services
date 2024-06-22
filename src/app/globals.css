@@ -97,7 +97,7 @@ body {
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #efefef #700000;
+  scrollbar-color: #400000 #70000001;
 }
 
 /* Chrome, Edge, and Safari */
@@ -106,11 +106,11 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #700000;
+  background: #70000001;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #efefef;
+  background-color: #400000;
   border-radius: 20px;
   border: 10px dashed #ffffff;
 }

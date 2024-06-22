@@ -6,9 +6,10 @@ import FormInput, {
 import { Button } from "@/components/ui/button";
 import { sendFeedback } from "@/lib/api/sendform";
 import { cn } from "@/lib/utils";
-import { React, useRef } from "react";
+import { React, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { motion, useInView } from "framer-motion";
 
 const FeedBack = () => {
   const {
@@ -36,8 +37,28 @@ const FeedBack = () => {
     }
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "0px 0px -400px 0px" });
+
+  useEffect(() => {
+    console.log("feedback is in view: ", isInView);
+  }, [isInView]);
+
   return (
-    <section className="flex w-full flex-col items-center gap-5">
+    <motion.section
+      ref={ref}
+      variants={{
+        init: { opacity: 0, scale: 0.95 },
+        anim: {
+          opacity: 1,
+          scale: 1,
+          transition: { type: "spring", duration: 1 },
+        },
+      }}
+      initial="init"
+      animate={isInView && "anim"}
+      className="flex w-full flex-col items-center gap-5"
+    >
       <h2>FeedBack</h2>
       <div className="flex w-[90%] flex-col items-center rounded-3xl border-4 border-white p-5 md:w-[75%] md:flex-row md:p-10">
         <form
@@ -133,7 +154,7 @@ const FeedBack = () => {
           <Button className="rounded-xl">SEND</Button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

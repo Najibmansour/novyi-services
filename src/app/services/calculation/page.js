@@ -22,39 +22,33 @@ const info = {
     "we will master the calculation of your unit economics; by combining your business insights with our analytical expertise, we will identify key cost drivers and revenue streams, optimize pricing strategies, and enhance profitability. Let's succeed together.",
 };
 
-const variant1 = {
-  initial: {
+const demoVariants = {
+  hidden: {
     opacity: 0,
-    y: 100,
+    y: 50,
   },
   animate: {
     opacity: 1,
-    scale: 1,
-    transition: { staggerChildren: 0.3 },
-  },
-  transition: {
-    ease: "easeInOut",
-    delay: 0,
-    duration: 1,
-    staggerChildren: 0.3,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      staggerChildren: 0.2,
+    },
   },
 };
-
-const variant2 = {
-  initial: {
+const demoVariants2 = {
+  hidden: {
     opacity: 0,
-    y: 100,
+    y: 50,
   },
   animate: {
     opacity: 1,
-    scale: 1,
-    transition: { staggerChildren: 0.3 },
-  },
-  transition: {
-    ease: "easeInOut",
-    delay: 0,
-    duration: 1,
-    staggerChildren: 0.3,
+    y: 0,
+    transition: {
+      delay: 0.6,
+      ease: "easeInOut",
+      staggerChildren: 0.5,
+    },
   },
 };
 
@@ -62,19 +56,12 @@ const Branding = () => {
   return (
     <main className="flex h-homepage-section w-full flex-col items-center space-y-5 md:space-y-10">
       <motion.section
-        variants={{
-          hidden: { scale: 0, opacity: 0 },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: { staggerChildren: 0.1 },
-          },
-        }}
+        variants={demoVariants}
         initial="hidden"
-        animate="visible"
+        animate="animate"
         className="flex h-auto w-[90%] flex-col space-x-5 space-y-5 md:flex-row md:items-center md:justify-evenly"
       >
-        <motion.div>
+        <motion.div variants={demoVariants}>
           <h1 className="text-wrap text-4xl md:text-7xl md:leading-[5rem]">
             {info.title}
           </h1>
@@ -82,7 +69,10 @@ const Branding = () => {
             {info.subtitle}
           </h3>
         </motion.div>
-        <motion.div className="w-[90%] rounded-3xl shadow-2xl md:w-[50%]">
+        <motion.div
+          variants={demoVariants}
+          className="w-[90%] rounded-3xl shadow-2xl md:w-[50%]"
+        >
           <Image
             alt="servvice_image"
             src={IMAGE}
@@ -92,18 +82,14 @@ const Branding = () => {
           />
         </motion.div>
       </motion.section>
-      <section className="mt-8 flex h-auto w-[90%] flex-col space-y-8 md:flex-row md:space-x-0 md:space-y-0">
+      <motion.section
+        variants={demoVariants2}
+        initial="hidden"
+        animate="animate"
+        className="mt-8 flex h-auto w-[90%] flex-col space-y-8 md:flex-row md:space-x-0 md:space-y-0"
+      >
         <motion.div
-          variants={{
-            hidden: { scale: 0, opacity: 0 },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: { staggerChildren: 0.1 },
-            },
-          }}
-          initial="hidden"
-          animate="visible"
+          variants={demoVariants2}
           className="md:flex md:w-[33%] md:flex-col md:items-center"
         >
           <div>
@@ -114,16 +100,7 @@ const Branding = () => {
           </div>
         </motion.div>
         <motion.div
-          variants={{
-            hidden: { scale: 0, opacity: 0 },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: { staggerChildren: 0.1 },
-            },
-          }}
-          initial="hidden"
-          animate="visible"
+          variants={demoVariants2}
           className="md:flex md:w-[33%] md:flex-col md:items-center"
         >
           <div>
@@ -138,16 +115,7 @@ const Branding = () => {
           </div>
         </motion.div>
         <motion.div
-          variants={{
-            hidden: { scale: 0, opacity: 0 },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: { staggerChildren: 0.1 },
-            },
-          }}
-          initial="hidden"
-          animate="visible"
+          variants={demoVariants2}
           className="md:flex md:w-[33%] md:flex-col md:items-center"
         >
           <div>
@@ -157,7 +125,7 @@ const Branding = () => {
             <p className="md:text-xl md:leading-snug">{info.success}</p>
           </div>
         </motion.div>
-      </section>
+      </motion.section>
     </main>
   );
 };

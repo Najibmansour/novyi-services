@@ -46,7 +46,7 @@ const ContactDialogue = ({ children }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-h-min max-w-[400px] rounded-3xl border-2 bg-secondary p-10 md:max-w-min">
+      <DialogContent className="max-h-min max-w-[400px] border-2 bg-red-950/50 p-10 backdrop-blur md:max-w-min">
         <DialogHeader>
           <DialogTitle className="text-center text-xl md:text-4xl">
             Contact Us
