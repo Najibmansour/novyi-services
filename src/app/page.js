@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="-mt-20 h-screen w-full overflow-x-hidden">
+    <main className="-mt-20 w-full overflow-x-hidden">
       <div className="h-16" />
       <Hero />
       <div className="mt-10 space-y-20">
@@ -17,7 +17,7 @@ export default function Home() {
         <FAQs />
         <FeedBack />
       </div>
-      <div className="h-48" />
+      {/* <div className="h-48" /> */}
     </main>
   );
 }

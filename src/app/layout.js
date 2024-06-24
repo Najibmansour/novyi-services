@@ -3,6 +3,7 @@ import "@/app/globals.css";
 import Navbar from "@/components/layout/navbar/components/navbar";
 import { Toaster } from "sonner";
 import BgGradiant from "@/components/layout/bg/bg-gradiant";
+import { Footer } from "@/components/layout/footer/footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <main className="relative">{children}</main>
+        <Footer></Footer>
       </body>
     </html>
   );
