@@ -6,7 +6,6 @@ import Search from "./search_bar";
 const navigation = [
   { title: "Home", href: "/" },
   { title: "Follow Us", href: "/" },
-  { title: "Contact Us", href: "/" },
 ];
 
 const NovoNavigation = (props) => {
