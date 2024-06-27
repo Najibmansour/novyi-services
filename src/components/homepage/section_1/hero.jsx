@@ -20,7 +20,7 @@ const Hero = () => {
             className="italic leading-4 md:text-center md:leading-snug"
           >
             we are the missing part of your <br />
-            sucsess puzzle
+            success puzzle
           </motion.h5>
         </div>
       </div>
