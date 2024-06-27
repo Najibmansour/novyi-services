@@ -57,7 +57,7 @@ const FeedBack = () => {
       }}
       initial="init"
       animate={isInView && "anim"}
-      className="flex w-full flex-col items-center gap-5"
+      className="flex w-full flex-col items-center gap-5 backdrop-blur"
     >
       <h2>FeedBack</h2>
       <div className="flex w-[90%] flex-col items-center rounded-3xl border-4 border-white p-5 md:w-[75%] md:flex-row md:p-10">

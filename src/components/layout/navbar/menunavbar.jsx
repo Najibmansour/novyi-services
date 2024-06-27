@@ -20,12 +20,12 @@ export function MenuNavbar({ navigation }) {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="w-[90%] border-0 bg-[#9a0202] opacity-75"
+        className="w-[100%] border-0 bg-[#9a020200] backdrop-blur"
       >
         <SheetHeader>
           <LOGOIMG className="h-20 w-full" />
         </SheetHeader>
-        <div className="grid gap-10 py-10">
+        <div className="grid gap-10 py-10 text-center">
           {navigation.map(({ title, href }, i) => (
             <Link key={i} href={href} className="text-4xl text-[#fafafa]">
               {title}

@@ -76,7 +76,7 @@ const FAQs = () => {
             <motion.div variants={demoVariants} key={i}>
               <AccordionItem
                 value={`item-${i}`}
-                className="rounded-3xl border-2 border-white px-6 text-white shadow-xl"
+                className="rounded-3xl border-2 border-white px-6 text-white shadow-xl backdrop-blur"
               >
                 <AccordionTrigger className="text-left font-semibold tracking-wide lg:text-2xl">
                   {title}
