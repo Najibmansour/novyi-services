@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
           }}
         />
         <main className="relative">{children}</main>
-        <Footer></Footer>
       </body>
+      <Footer></Footer>
     </html>
   );
 }

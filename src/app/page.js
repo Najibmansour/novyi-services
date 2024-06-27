@@ -3,8 +3,6 @@ import Occured from "@/components/homepage/section_2/occured";
 import FAQs from "@/components/homepage/section_3/faq";
 import FeedBack from "@/components/homepage/section_4/feedback";
 import Services from "@/components/homepage/section_5/services";
-import BgGradiant from "@/components/layout/bg/bg-gradiant";
-import Image from "next/image";
 
 export default function Home() {
   return (

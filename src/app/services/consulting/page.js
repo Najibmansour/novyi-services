@@ -74,13 +74,13 @@ const Branding = () => {
         </motion.div>
       </motion.section>
       <motion.section
-        variants={demoVariants2}
+        variants={demoVariants}
         initial="hidden"
         animate="animate"
         className="mt-8 flex h-auto w-[90%] flex-col space-y-8 md:flex-row md:space-x-0 md:space-y-0"
       >
         <motion.div
-          variants={demoVariants2}
+          variants={demoVariants}
           className="md:flex md:w-[33%] md:flex-col md:items-center"
         >
           <div>
@@ -91,7 +91,7 @@ const Branding = () => {
           </div>
         </motion.div>
         <motion.div
-          variants={demoVariants2}
+          variants={demoVariants}
           className="md:flex md:w-[33%] md:flex-col md:items-center"
         >
           <div>
