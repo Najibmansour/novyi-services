@@ -45,7 +45,7 @@ const demoVariants2 = {
 
 const Branding = () => {
   return (
-    <main className="flex h-homepage-section w-full flex-col items-center space-y-5 md:space-y-10">
+    <main className="flex w-full flex-col items-center space-y-5 md:space-y-10">
       <motion.section
         variants={demoVariants}
         initial="hidden"

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import ServiceCard from "./service_card";
 import { motion, useInView, stagger } from "framer-motion";
 
@@ -80,10 +80,6 @@ const Occurred = () => {
     once: true,
     margin: "-500px 0px",
   });
-
-  useEffect(() => {
-    // console.log("Element is in view: ", isInView);
-  }, [isInView]);
 
   return (
     <div className="text-white">

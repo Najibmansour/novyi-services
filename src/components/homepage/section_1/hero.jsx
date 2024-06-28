@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="grid h-[88svh] w-full grid-cols-6 grid-rows-1 md:h-homepage-section">
+    <section className="md: grid h-[88svh] w-full grid-cols-6 grid-rows-1">
       <div className="col-span-5 col-start-1 row-span-1 row-start-1 flex flex-col justify-center md:items-center">
         <div className="-translate-y-20 translate-x-3 md:-translate-y-12 md:space-y-2">
           <motion.h1

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
 
 function isLeft(element) {
@@ -50,10 +50,6 @@ const ServiceCard = ({ title, image, href, index }) => {
     once: false,
     margin: "0px 300px 0px 0px ",
   });
-
-  useEffect(() => {
-    // console.log("Element is in view: ", isInView, index);
-  }, [isInView]);
 
   return (
     <AnimatePresence>

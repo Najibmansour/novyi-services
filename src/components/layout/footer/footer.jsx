@@ -10,7 +10,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="flex h-20 w-full flex-row items-center justify-center text-white md:h-28">
+    <footer className="flex h-24 w-full flex-row items-center justify-center text-white md:mt-5 md:h-28">
       <div className="flex w-min flex-row justify-between gap-3 md:gap-5">
         <Link href="/" className="transition-all hover:scale-105">
           <IoLogoTiktok className="size-10 md:size-12" />

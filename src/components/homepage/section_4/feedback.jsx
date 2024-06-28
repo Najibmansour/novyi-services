@@ -6,7 +6,7 @@ import FormInput, {
 import { Button } from "@/components/ui/button";
 import { sendFeedback } from "@/lib/api/sendform";
 import { cn } from "@/lib/utils";
-import { React, useEffect, useRef } from "react";
+import { React, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { motion, useInView } from "framer-motion";
@@ -39,10 +39,6 @@ const FeedBack = () => {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "0px 0px -400px 0px" });
-
-  useEffect(() => {
-    console.log("feedback is in view: ", isInView);
-  }, [isInView]);
 
   return (
     <motion.section

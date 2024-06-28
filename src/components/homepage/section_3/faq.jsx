@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import ContactDialogue from "../contact_dialogue/contact";
 import { motion, useInView } from "framer-motion";
 
@@ -54,10 +54,6 @@ const FAQs = () => {
     once: true,
     margin: "-500px 0px",
   });
-
-  useEffect(() => {
-    // console.log("Element is in view: ", isInView);
-  }, [isInView]);
 
   return (
     <section className="flex w-screen flex-col items-center gap-y-5 text-secondary">
