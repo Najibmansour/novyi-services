@@ -1,9 +1,9 @@
 import "@/app/globals.css";
 import { Toaster } from "sonner";
 export const metadata = {
-  title: "Novo Concept",
+  title: "Novo Concepts",
   description:
-    "Novo Concept: Your all-in-one business partner, from branding to auditing, consulting, we offer tailored strategies to enhance your brand, and drive sustainable growth.",
+    "Novo Concepts: Your all-in-one business partner, from branding to auditing, consulting, we offer tailored strategies to enhance your brand, and drive sustainable growth.",
   keywords: [
     "Branding",
     "Marketing",

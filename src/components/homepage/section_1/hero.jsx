@@ -12,7 +12,7 @@ const Hero = () => {
             animate={{ opacity: 1, transition: { delay: 1, duration: 1.5 } }}
             className="tracking-tight"
           >
-            NOVO CONCEPT
+            NOVO CONCEPTS
           </motion.h1>
           <motion.h5
             initial={{ opacity: 0 }}
