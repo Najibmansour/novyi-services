@@ -50,14 +50,7 @@ const Hero = () => {
         >
           Card SEO
         </motion.div>
-        <motion.div
-          variants={{
-            hidden: { x: 200, opacity: 0 },
-            visible: { x: 0, opacity: 1, transition: { staggerChildren: 0.1 } },
-          }}
-        >
-          Branding
-        </motion.div>
+
         <motion.div
           variants={{
             hidden: { x: 200, opacity: 0 },
