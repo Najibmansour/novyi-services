@@ -13,7 +13,7 @@ const services = [
   {
     title: "Auditing",
     href: "/services/audit",
-    image: images["Auditing.svg"][0],
+    image: images["auditing.svg"][0],
   },
   {
     title: "Calculations",
@@ -28,24 +28,24 @@ const services = [
   {
     title: "Branding",
     href: "/services/branding",
-    image: images["fingerprint-branding.svg"][0],
+    image: images["branding.svg"][0],
   },
   {
     title: "Graphic Desgin",
     href: "/services/branding",
-    image: images["graphic-design.svg"][0],
+    image: images["design.svg"][0],
   },
   {
     title: "marketing",
     href: "/services/marketing",
-    image: images["Marketing-new.svg"][0],
+    image: images["marketing.svg"][0],
   },
   {
     title: "Sales",
     href: "/services/sales",
-    image: images["presentation.svg"][0],
+    image: images["sales.svg"][0],
   },
-  { title: "SEO", href: "/services/seo", image: images["seo.svg"][0] },
+  { title: "SEO", href: "/services/seo", image: images["SEO.svg"][0] },
 ];
 
 const Services = () => {
