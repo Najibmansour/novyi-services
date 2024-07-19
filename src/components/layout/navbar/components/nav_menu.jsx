@@ -3,10 +3,7 @@ import React from "react";
 import { MenuNavbar } from "../menunavbar";
 import Search from "./search_bar";
 
-const navigation = [
-  { title: "Home", href: "/" },
-  { title: "Follow Us", href: "/" },
-];
+const navigation = [{ title: "Home", href: "/" }];
 
 const NovoNavigation = (props) => {
   return (
