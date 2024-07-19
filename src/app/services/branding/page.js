@@ -5,7 +5,7 @@ import IMAGE from "@/assets/service_images/branding.webp";
 import { motion } from "framer-motion";
 
 const info = {
-  title: "Branding and design",
+  title: "Graphic",
   subtitle: "Makes your business memorable",
   overview:
     "Our Branding and Design service crafts a distinctive and unified brand identity that captures the essence of your business, that resonates with your target audience.",
