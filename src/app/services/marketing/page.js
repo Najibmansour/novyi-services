@@ -55,7 +55,7 @@ const Branding = () => {
         variants={demoVariants}
         initial="hidden"
         animate="animate"
-        className="flex h-auto w-[90%] flex-col space-x-5 space-y-5 md:flex-row md:items-center md:justify-evenly"
+        className="flex h-auto w-[90%] flex-col space-x-0 space-y-0 md:flex-row md:items-center md:justify-evenly"
       >
         <motion.div variants={demoVariants}>
           <h1 className="text-wrap text-4xl md:text-7xl md:leading-[5rem]">
@@ -67,7 +67,7 @@ const Branding = () => {
         </motion.div>
         <motion.div
           variants={demoVariants}
-          className="w-[90%] rounded-3xl shadow-2xl md:w-[50%]"
+          className="w-[90%] rounded-3xl md:w-[50%]"
         >
           <Image
             alt="servvice_image"

@@ -17,7 +17,7 @@ const NovoNavigation = (props) => {
           <Link
             key={i}
             href={href}
-            className="text-xl tracking-wide transition-all hover:scale-105 hover:shadow-2xl"
+            className="hover: text-xl tracking-wide transition-all hover:scale-105"
           >
             {title}
           </Link>

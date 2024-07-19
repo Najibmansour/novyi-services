@@ -5,13 +5,13 @@ import { motion, useInView, stagger } from "framer-motion";
 
 const services = [
   {
-    title: "Description for new concept",
+    title: "Description for Novo concepts",
     main_icon: <InfoIcon />,
     desc: "Your premier solution to enhance your products and develop your business. Our experts in consulting, branding, promotion help you succeed on many platforms, with transparent pricing, and secure transactions.",
     list: [],
   },
   {
-    title: "Description for new concept",
+    title: "Description for Novo concepts",
     main_icon: <InfoIcon />,
     desc: "Your premier solution to enhance your products and develop your business. Our experts in consulting, branding, promotion help you succeed on many platforms, with transparent pricing, and secure transactions.",
     list: [

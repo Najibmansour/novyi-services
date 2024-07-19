@@ -53,29 +53,33 @@ const ServiceCard = ({ title, image, href, index }) => {
 
   return (
     <AnimatePresence>
-      <motion.div
-        ref={ref}
-        variants={variants}
-        initial="hidden"
-        exit="hidden"
-        animate={isInView && "visible"}
-      >
-        <Link
-          href={href}
-          className="group relative flex aspect-square w-full items-center justify-center rounded-xl bg-white p-5 md:p-24"
+      {index !== 4 ? (
+        <motion.div
+          ref={ref}
+          variants={variants}
+          initial="hidden"
+          exit="hidden"
+          animate={isInView && "visible"}
         >
-          <Image
-            src={image}
-            width={[100, 50]}
-            height={[100, 50]}
-            alt={title}
-            className="filter transition-all group-hover:blur-2xl"
-          />
-          <h6 className="absolute text-center font-bold text-transparent transition-all group-hover:text-lg group-hover:text-secondary md:text-xl md:tracking-wider md:group-hover:text-5xl">
-            {title}
-          </h6>
-        </Link>
-      </motion.div>
+          <Link
+            href={href}
+            className="group relative flex aspect-square w-full items-center justify-center rounded-xl bg-white p-5 md:p-24"
+          >
+            <Image
+              src={image}
+              width={[100, 50]}
+              height={[100, 50]}
+              alt={title}
+              className="filter transition-all group-hover:blur-2xl"
+            />
+            <h6 className="absolute text-center font-bold text-transparent transition-all group-hover:text-lg group-hover:text-secondary md:text-xl md:tracking-wider md:group-hover:text-5xl">
+              {title}
+            </h6>
+          </Link>
+        </motion.div>
+      ) : (
+        <div> </div>
+      )}
     </AnimatePresence>
   );
 };
